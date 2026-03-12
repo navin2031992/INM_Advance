@@ -27,8 +27,9 @@
  *                          Omit to use the default raw field layout.
  *   --currency=CUR       Override default currency (e.g. USD, EUR)
  *   --config=PATH        Path to config file (default: ./generator.config.json)
- *   --output=DIR         Output directory (default: ./output)
- *   --help               Show this help
+ *   --output=DIR         Output directory (default: ./output) DDMMYYYY — e.g. 15012026 -- YYYYMMDD — e.g. 20260115 -- DD/MM/YYYY — e.g. 15/01/2026 -- MM/DD/YYYY — e.g. 01/15/2026
+ *   --dateFormat         YYYY-MM-DD — ISO standard (default, no change) ---
+ *  --help               Show this help
  */
 
 const path = require('path');
