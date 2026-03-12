@@ -1,0 +1,44 @@
+{
+  "name": "intellimatch-data-generator",
+  "version": "1.0.0",
+  "description": "Dummy financial transaction data generator for IntelliMatch FIS reconciliation testing",
+  "main": "src/index.js",
+  "scripts": {
+    "generate": "node src/index.js",
+    "generate-data": "node src/index.js",
+
+    "generate:csv": "node src/index.js --format=csv",
+    "generate:excel": "node src/index.js --format=excel",
+    "generate:json": "node src/index.js --format=json",
+    "generate:pipe": "node src/index.js --format=pipe",
+    "generate:mt940": "node src/index.js --format=mt940",
+    "generate:bai2": "node src/index.js --format=bai2",
+    "generate:camt053": "node src/index.js --format=camt053",
+    "generate:all": "node src/index.js --format=all",
+
+    "scenario:perfect": "node src/index.js --scenario=perfect --format=csv",
+    "scenario:oneToMany": "node src/index.js --scenario=oneToMany --format=csv",
+    "scenario:manyToOne": "node src/index.js --scenario=manyToOne --format=csv",
+    "scenario:unmatched": "node src/index.js --scenario=unmatchedLedger,unmatchedStatement --format=csv",
+    "scenario:amountDiff": "node src/index.js --scenario=amountDiff --format=csv",
+    "scenario:dateDiff": "node src/index.js --scenario=dateDiff --format=csv",
+    "scenario:all": "node src/index.js --scenario=perfect,oneToMany,manyToOne,unmatchedLedger,unmatchedStatement,amountDiff,dateDiff --format=csv",
+
+    "import:GL": "node src/index.js --importFormat=GL --format=csv --file=ledger",
+    "import:AP": "node src/index.js --importFormat=AP --format=csv --file=ledger",
+    "import:AR": "node src/index.js --importFormat=AR --format=csv --file=ledger",
+    "import:BANK": "node src/index.js --importFormat=BANK --format=csv --file=statement",
+    "import:BROKERAGE": "node src/index.js --importFormat=BROKERAGE --format=csv --file=statement",
+    "import:CUSTODIAN": "node src/index.js --importFormat=CUSTODIAN --format=csv --file=statement",
+    "import:GL:BANK": "node src/index.js --importFormat=GL:BANK --format=csv",
+    "import:AP:BANK": "node src/index.js --importFormat=AP:BANK --format=csv",
+    "import:AR:CUSTODIAN": "node src/index.js --importFormat=AR:CUSTODIAN --format=csv"
+  },
+  "keywords": ["intellimatch", "reconciliation", "data-generator", "financial", "testing"],
+  "author": "IntelliMatch Team",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "xlsx": "^0.18.5"
+  }
+}

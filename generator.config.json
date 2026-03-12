@@ -1,0 +1,28 @@
+{
+  "records": 1000,
+  "format": "csv",
+  "file": "both",
+  "currency": "USD",
+  "dateRange": {
+    "start": "2026-01-01",
+    "end": "2026-03-31"
+  },
+  "matchingPercentages": {
+    "perfectMatch": 50,
+    "oneToMany": 15,
+    "manyToOne": 15,
+    "unmatched": 10,
+    "amountDifference": 5,
+    "dateDifference": 5
+  },
+  "accounts": {
+    "ledger": ["10001", "10002", "20001", "20002", "30001", "40001", "40002", "50001", "60001", "70001"],
+    "bank": ["GB29NWBK60161331926819", "DE89370400440532013000", "FR7614508059144921279050070", "US123456789012345678", "AU123456789012345"]
+  },
+  "currencies": ["USD", "EUR", "GBP", "AUD", "CHF", "JPY", "CAD"],
+  "amountRange": {
+    "min": 100,
+    "max": 500000
+  },
+  "outputDir": "./output"
+}
