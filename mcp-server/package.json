@@ -1,0 +1,16 @@
+{
+  "name": "intellimatch-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for IntelliMatch FIS Dummy Data Generator — enables AI assistants to generate financial test data, create new formats, and add import schemas via natural language prompts",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "keywords": ["mcp", "intellimatch", "financial", "test-data", "reconciliation"],
+  "author": "IntelliMatch Team",
+  "license": "MIT"
+}

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "intellimatch": {
+      "command": "node",
+      "args": ["mcp-server/index.js"],
+      "cwd": ".",
+      "description": "IntelliMatch FIS Dummy Data Generator — generate financial test data, create new formats, and add import schemas via AI prompts"
+    }
+  }
+}
