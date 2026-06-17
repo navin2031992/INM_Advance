@@ -19,6 +19,14 @@
  *   create_output_format  — add a brand-new file formatter dynamically
  *   add_import_schema     — add a new ERP/import schema row mapping
  *   get_generated_files   — list recently generated output files
+ *
+ * Security model (internal organisational use):
+ *   - Transport: stdio only — NOT a network socket, not reachable from outside the machine
+ *   - spawn() uses shell:false + array args — no shell injection
+ *   - All user-supplied paths are confined to PROJECT_ROOT
+ *   - customCode and expressions are scanned for dangerous Node.js APIs
+ *   - All enum-style inputs are validated against known-good allow-lists
+ *   - Records are capped to prevent memory/disk exhaustion
  */
 
 import { Server }               from '@modelcontextprotocol/sdk/server/index.js';
@@ -32,12 +40,124 @@ import {
   readFileSync, writeFileSync,
   readdirSync, existsSync, rmSync
 } from 'fs';
-import { join, dirname, resolve } from 'path';
-import { fileURLToPath }         from 'url';
+import { join, dirname, resolve, normalize } from 'path';
+import { fileURLToPath }                     from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
 const PROJECT_ROOT = resolve(__dirname, '..');
+
+// ── Allow-lists & limits ──────────────────────────────────────────────────────
+
+const VALID_FORMATS = new Set([
+  'csv','pipe','json','fixedwidth','excel',
+  'mt940','mt942','mt950','mt103','mt202','mt300','mt535',
+  'bai2','camt053','all'
+]);
+
+const VALID_SCENARIOS = new Set([
+  'perfect','oneToMany','manyToOne',
+  'unmatchedLedger','unmatchedStatement',
+  'amountDiff','dateDiff'
+]);
+
+const VALID_FILE_TYPES   = new Set(['ledger','statement','both']);
+const VALID_DATE_FORMATS = new Set(['YYYY-MM-DD','DDMMYYYY','YYYYMMDD','DD/MM/YYYY','MM/DD/YYYY']);
+const CURRENCY_RE        = /^[A-Z]{3}$/;
+const IDENTIFIER_RE      = /^[A-Za-z_][A-Za-z0-9_]*$/;
+const EXT_RE             = /^[a-z0-9]{1,10}$/;
+
+const MAX_RECORDS         = 50_000;
+const MAX_LIST_LIMIT      = 100;
+const MAX_FIELD_MAPPINGS  = 100;
+
+// ── Security guards ───────────────────────────────────────────────────────────
+
+/**
+ * Ensures a user-supplied path resolves inside PROJECT_ROOT.
+ * Throws on path traversal or absolute paths that escape the project.
+ */
+function assertWithinProject(userPath) {
+  const abs = resolve(PROJECT_ROOT, userPath);
+  const rel = abs.startsWith(PROJECT_ROOT + '\\') || abs.startsWith(PROJECT_ROOT + '/');
+  if (!rel && abs !== PROJECT_ROOT) {
+    throw new Error(
+      `Path "${userPath}" resolves outside the project directory. ` +
+      'Only paths inside the project folder are allowed.'
+    );
+  }
+  return abs;
+}
+
+/**
+ * Scans code strings for dangerous Node.js APIs that have no place in a
+ * data-formatting function. Throws with the matched pattern if found.
+ *
+ * This is a defence-in-depth measure for internal use — it stops accidental
+ * or naive misuse. It is NOT a full sandbox.
+ */
+const DANGEROUS_CODE_PATTERNS = [
+  { re: /\bchild_process\b/,          label: 'child_process module' },
+  { re: /\bexecSync\s*\(/,            label: 'execSync()' },
+  { re: /\bexecFileSync\s*\(/,        label: 'execFileSync()' },
+  { re: /\bspawnSync\s*\(/,           label: 'spawnSync()' },
+  { re: /\bexec\s*\(\s*[`'"]/,        label: 'exec() with string argument' },
+  { re: /\beval\s*\(/,                label: 'eval()' },
+  { re: /new\s+Function\s*\(/,        label: 'new Function()' },
+  { re: /\bprocess\s*\.\s*exit/,      label: 'process.exit()' },
+  { re: /\bprocess\s*\.\s*env\b/,     label: 'process.env access' },
+  { re: /\bprocess\s*\.\s*kill/,      label: 'process.kill()' },
+  { re: /\brequire\s*\(\s*['"`](?!\.)[^./]/, label: 'require() of non-relative module' },
+  { re: /\bimport\s*\(/,              label: 'dynamic import()' },
+  { re: /\bfs\s*\.\s*(unlinkSync|rmSync|rmdirSync|writeFile|appendFile|unlink|rm)\s*\(/, label: 'fs destructive write/delete' },
+  { re: /\bnet\b|\bhttp\b|\bhttps\b/, label: 'network module (net/http/https)' },
+];
+
+function checkDangerousCode(code, context = 'code') {
+  for (const { re, label } of DANGEROUS_CODE_PATTERNS) {
+    if (re.test(code)) {
+      throw new Error(
+        `Rejected: ${context} contains "${label}" which is not permitted in generator extensions. ` +
+        'Formatter code must only transform the records array into a string — no system calls, ' +
+        'no network, no file I/O.'
+      );
+    }
+  }
+}
+
+/**
+ * Validates that a string is a safe JS identifier (used for outputField / sourceField).
+ */
+function assertIdentifier(value, fieldLabel) {
+  if (!value || !IDENTIFIER_RE.test(value)) {
+    throw new Error(
+      `"${fieldLabel}" value "${value}" is not a valid JavaScript identifier. ` +
+      'Use only letters, digits, and underscores, starting with a letter or underscore.'
+    );
+  }
+}
+
+/**
+ * Strips characters that could break out of a JS comment or single-quoted string.
+ * Used for user-supplied description / label text embedded in generated source.
+ */
+function sanitizeText(text) {
+  return String(text || '')
+    .replace(/\*\//g, '*-/')      // prevent comment escape
+    .replace(/'/g, "\\'")         // escape single quotes
+    .replace(/[\r\n]/g, ' ')      // flatten newlines
+    .slice(0, 256);               // hard length cap
+}
+
+/**
+ * Escapes a value that will be written inside a JS single-quoted string literal.
+ */
+function escapeForSingleQuotedString(value) {
+  return String(value === undefined ? '' : value)
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/[\r\n]/g, ' ');
+}
 
 // ── Static metadata ───────────────────────────────────────────────────────────
 
@@ -83,7 +203,7 @@ function runGenerator(args) {
   return new Promise((resolve, reject) => {
     const proc = spawn('node', ['src/index.js', ...args], {
       cwd:   PROJECT_ROOT,
-      shell: false
+      shell: false           // never run through a shell — prevents shell injection
     });
     let stdout = '', stderr = '';
     proc.stdout.on('data', d => { stdout += d.toString(); });
@@ -137,9 +257,10 @@ function readImportSchemas() {
 function buildDelimitedFormatter(formatName, delimiter, description, ext) {
   const cap     = formatName.charAt(0).toUpperCase() + formatName.slice(1);
   const delStr  = delimiter === '\t' ? "'\\t'" : `'${delimiter}'`;
+  const safeDesc = sanitizeText(description);
   return `'use strict';
 
-// ${cap} Formatter — ${description}
+// ${cap} Formatter — ${safeDesc}
 // Auto-generated by IntelliMatch MCP Server
 
 const DELIMITER = ${delStr};
@@ -164,20 +285,26 @@ module.exports = { formatLedger, formatStatement, ext: '${ext}' };
 function buildImportMapperFn(schemaName, recordType, description, fieldMappings) {
   const prefix = recordType === 'ledger' ? 'toLedger' : 'toStatement';
   const fnName = `${prefix}${schemaName}`;
+  const safeDesc = sanitizeText(description);
 
   const fieldLines = fieldMappings.map(f => {
+    assertIdentifier(f.outputField, 'outputField');
+
     if (f.static !== undefined) {
-      return `    ${f.outputField}: '${f.static}'`;
+      // Escape value for a single-quoted string literal
+      return `    ${f.outputField}: '${escapeForSingleQuotedString(f.static)}'`;
     } else if (f.expression) {
+      // expression is already scanned for dangerous patterns by the caller
       return `    ${f.outputField}: ${f.expression}`;
     } else {
+      assertIdentifier(f.sourceField || f.outputField, 'sourceField');
       return `    ${f.outputField}: rec.${f.sourceField || f.outputField}`;
     }
   }).join(',\n');
 
   return `
 /**
- * ${schemaName} — ${description}
+ * ${schemaName} — ${safeDesc}
  * Auto-generated by IntelliMatch MCP Server
  */
 function ${fnName}(rec) {
@@ -197,9 +324,6 @@ function patchIndexForNewFormat(formatName) {
 
   if (new RegExp(`['"]${formatName}['"]`).test(content)) return false;
 
-  // Append to formatters object — find the last require() line before
-  // the }; that closes the formatters block (identified by the following
-  // "// ── Main generation" section header).
   content = content.replace(
     /(  \w[\w]*:\s+require\('[^']+'\))\n\};\n\n\/\/ ──/,
     `$1,\n  ${formatName.padEnd(10)}: require('./formatters/${formatName}Formatter')\n};\n\n// ──`
@@ -230,7 +354,6 @@ function patchImportMapperForNewSchema(schemaName, recordType, description, mapp
       /ledger:\s+\[([^\]]+)\]/,
       (_, inner) => `ledger:    [${inner.trim()}, '${schemaName}']`
     );
-    // Insert into switch before default
     content = content.replace(
       /    default:   return records;  \/\/ passthrough/,
       `    case '${schemaName}': return records.map(toLedger${schemaName});\n    default:   return records;  // passthrough`
@@ -246,12 +369,13 @@ function patchImportMapperForNewSchema(schemaName, recordType, description, mapp
     );
   }
 
-  // 3. Add description entry — insert just before };\n  return map[fmt
+  // 3. Add description — insert just before };\n  return map[fmt
   const insertBefore = "\n  };\n  return map[fmt.toUpperCase()] || fmt;";
   const idx = content.lastIndexOf(insertBefore);
   if (idx !== -1) {
+    const safeDesc = sanitizeText(description);
     content = content.slice(0, idx)
-      + `,\n    ${schemaName}: '${description}'`
+      + `,\n    ${schemaName}: '${safeDesc}'`
       + content.slice(idx);
   }
 
@@ -281,7 +405,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         properties: {
           records: {
             type: 'number',
-            description: 'Number of ledger records (default: 100)',
+            description: `Number of ledger records (default: 100, max: ${MAX_RECORDS})`,
             default: 100
           },
           format: {
@@ -310,7 +434,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           },
           currency: {
             type: 'string',
-            description: 'Override currency, e.g. USD, EUR, GBP'
+            description: 'Override currency as 3-letter ISO code, e.g. USD, EUR, GBP'
           },
           dateFormat: {
             type: 'string',
@@ -319,7 +443,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           },
           outputDir: {
             type: 'string',
-            description: 'Output directory (default: ./output)'
+            description: 'Output directory relative to project root (default: ./output)'
           },
           split: {
             type: 'number',
@@ -419,14 +543,15 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           },
           fileExtension: {
             type: 'string',
-            description: 'File extension without dot, e.g. "tsv", "txt", "dat". Defaults to formatName.'
+            description: 'File extension without dot, e.g. "tsv", "txt", "dat" (lowercase letters/digits only, max 10 chars). Defaults to formatName.'
           },
           customCode: {
             type: 'string',
             description:
               'Full JavaScript CommonJS module code for custom formatters. ' +
               'Must export: formatLedger(records), formatStatement(records), ext (string). ' +
-              'Required when formatType is "custom". Overrides auto-generation for "delimited" too.'
+              'Required when formatType is "custom". Overrides auto-generation for "delimited" too. ' +
+              'System calls (exec, eval, process.exit, fs writes, network) are blocked.'
           }
         }
       }
@@ -466,8 +591,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
               type: 'object',
               required: ['outputField'],
               properties: {
-                outputField:  { type: 'string', description: 'Output field name' },
-                sourceField:  { type: 'string', description: 'Source field from the raw record' },
+                outputField:  { type: 'string', description: 'Output field name (valid JS identifier)' },
+                sourceField:  { type: 'string', description: 'Source field from the raw record (valid JS identifier)' },
                 static:       { type: 'string', description: 'Constant string value' },
                 expression:   { type: 'string', description: 'JavaScript expression using rec.* fields, e.g. rec.Currency or rec.TxnID.replace("LDG","INV")' }
               }
@@ -478,7 +603,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
             description:
               'Full JavaScript mapper function (optional). Must define a function named ' +
               'toLedger<SCHEMANAME> or toStatement<SCHEMANAME>. ' +
-              'Overrides auto-generation from fieldMappings when provided.'
+              'Overrides auto-generation from fieldMappings when provided. ' +
+              'System calls (exec, eval, process.exit, fs writes, network) are blocked.'
           }
         }
       }
@@ -493,11 +619,11 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         properties: {
           outputDir: {
             type: 'string',
-            description: 'Output directory to scan (default: ./output)'
+            description: 'Output directory relative to project root (default: ./output)'
           },
           limit: {
             type: 'number',
-            description: 'Max files to return (default: 20)',
+            description: `Max files to return (default: 20, max: ${MAX_LIST_LIMIT})`,
             default: 20
           }
         }
@@ -514,6 +640,48 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
     // ── generate_test_data ───────────────────────────────────────────────────
     if (name === 'generate_test_data') {
+
+      // ── Input validation ──
+      if (args.records !== undefined) {
+        const n = Number(args.records);
+        if (!Number.isInteger(n) || n < 1) throw new Error('records must be a positive integer.');
+        if (n > MAX_RECORDS) throw new Error(`records cannot exceed ${MAX_RECORDS} to prevent resource exhaustion.`);
+      }
+
+      if (args.format && args.format !== 'all') {
+        // Also allow custom formats registered after server start
+        const allFormats = new Set([...VALID_FORMATS, ...Object.keys(discoverFormats())]);
+        if (!allFormats.has(args.format)) {
+          throw new Error(`Unknown format "${args.format}". Valid: ${[...allFormats].join(', ')}`);
+        }
+      }
+
+      if (args.file && !VALID_FILE_TYPES.has(args.file)) {
+        throw new Error(`Unknown file type "${args.file}". Valid: ${[...VALID_FILE_TYPES].join(', ')}`);
+      }
+
+      if (args.scenario) {
+        const requested = String(args.scenario).split(',').map(s => s.trim());
+        for (const s of requested) {
+          if (!VALID_SCENARIOS.has(s)) {
+            throw new Error(`Unknown scenario "${s}". Valid: ${[...VALID_SCENARIOS].join(', ')}`);
+          }
+        }
+      }
+
+      if (args.dateFormat && !VALID_DATE_FORMATS.has(args.dateFormat)) {
+        throw new Error(`Unknown dateFormat "${args.dateFormat}". Valid: ${[...VALID_DATE_FORMATS].join(', ')}`);
+      }
+
+      if (args.currency && !CURRENCY_RE.test(args.currency)) {
+        throw new Error('currency must be a 3-letter ISO 4217 code, e.g. USD, EUR, GBP.');
+      }
+
+      if (args.outputDir) {
+        assertWithinProject(args.outputDir);
+      }
+
+      // ── Build command args ──
       const cmdArgs = [];
       if (args.records)      cmdArgs.push(`--records=${args.records}`);
       if (args.format)       cmdArgs.push(`--format=${args.format}`);
@@ -526,9 +694,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       if (args.split)        cmdArgs.push(`--split=${args.split}`);
       if (args.consolidate)  cmdArgs.push(`--consolidate=${args.consolidate}`);
 
-      const output  = await runGenerator(cmdArgs);
-      const outDir  = args.outputDir ? resolve(PROJECT_ROOT, args.outputDir) : join(PROJECT_ROOT, 'output');
-      const files   = getOutputFiles(outDir);
+      const output = await runGenerator(cmdArgs);
+      const outDir = args.outputDir
+        ? assertWithinProject(args.outputDir)
+        : join(PROJECT_ROOT, 'output');
+      const files  = getOutputFiles(outDir);
 
       return {
         content: [{
@@ -602,7 +772,20 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const format   = args.format   || 'csv';
       const scenario = args.scenario || 'perfect';
       const fileType = args.file     || 'ledger';
-      const tempDir  = join(PROJECT_ROOT, '.mcp_preview_tmp');
+
+      // Validate
+      const allFormats = new Set([...VALID_FORMATS, ...Object.keys(discoverFormats())]);
+      if (!allFormats.has(format)) {
+        throw new Error(`Unknown format "${format}". Valid: ${[...allFormats].join(', ')}`);
+      }
+      if (!VALID_SCENARIOS.has(scenario)) {
+        throw new Error(`Unknown scenario "${scenario}". Valid: ${[...VALID_SCENARIOS].join(', ')}`);
+      }
+      if (!VALID_FILE_TYPES.has(fileType)) {
+        throw new Error(`Unknown file type "${fileType}". Valid: ${[...VALID_FILE_TYPES].join(', ')}`);
+      }
+
+      const tempDir = join(PROJECT_ROOT, '.mcp_preview_tmp');
 
       try {
         const cmdArgs = [
@@ -641,7 +824,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
               content.slice(0, 5000),
               content.length > 5000 ? '... (truncated)' : '',
               '```'
-            ].filter(l => l !== undefined).join('\n')
+            ].join('\n')
           }]
         };
       } finally {
@@ -660,6 +843,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         customCode
       } = args;
 
+      // Validate formatName
       if (!formatName || !/^[a-z][a-z0-9_]*$/.test(formatName)) {
         throw new Error(
           'formatName must be lowercase alphanumeric (e.g. "tsv", "semicolon", "sapcsv"). ' +
@@ -667,8 +851,22 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         );
       }
 
-      const ext             = fileExtension || formatName;
-      const formatterPath   = join(PROJECT_ROOT, 'src', 'formatters', `${formatName}Formatter.js`);
+      // Validate fileExtension
+      const ext = fileExtension || formatName;
+      if (!EXT_RE.test(ext)) {
+        throw new Error(
+          `fileExtension "${ext}" must be lowercase letters/digits only, max 10 characters.`
+        );
+      }
+
+      // Validate delimiter for delimited type
+      if (!customCode && formatType === 'delimited') {
+        if (typeof delimiter !== 'string' || delimiter.length === 0 || delimiter.length > 4) {
+          throw new Error('delimiter must be a non-empty string of 1–4 characters.');
+        }
+      }
+
+      const formatterPath = join(PROJECT_ROOT, 'src', 'formatters', `${formatName}Formatter.js`);
 
       if (existsSync(formatterPath)) {
         throw new Error(
@@ -685,6 +883,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             'It must also export ext (file extension string).'
           );
         }
+        // Security: scan for dangerous patterns before writing to disk
+        checkDangerousCode(customCode, 'customCode');
         code = customCode;
       } else if (formatType === 'delimited') {
         code = buildDelimitedFormatter(formatName, delimiter, formatDescription, ext);
@@ -732,6 +932,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         customCode
       } = args;
 
+      // Validate schemaName
       if (!schemaName || !/^[A-Z][A-Z0-9_]*$/.test(schemaName)) {
         throw new Error(
           'schemaName must be UPPERCASE alphanumeric (e.g. "SAP_GL", "ORACLE_AP"). ' +
@@ -743,6 +944,20 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       }
       if (!fieldMappings.length && !customCode) {
         throw new Error('Provide either fieldMappings (array) or customCode (function string).');
+      }
+      if (fieldMappings.length > MAX_FIELD_MAPPINGS) {
+        throw new Error(`fieldMappings cannot exceed ${MAX_FIELD_MAPPINGS} entries.`);
+      }
+
+      // Validate each field mapping
+      for (const f of fieldMappings) {
+        assertIdentifier(f.outputField, 'outputField');
+        if (f.expression) {
+          checkDangerousCode(f.expression, `expression for field "${f.outputField}"`);
+        }
+        if (f.sourceField) {
+          assertIdentifier(f.sourceField, 'sourceField');
+        }
       }
 
       let mapperCode;
@@ -756,6 +971,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             `For ${recordType} schemas the naming convention is ${expectedFn}(rec) { return {...}; }.`
           );
         }
+        // Security: scan for dangerous patterns before patching source file
+        checkDangerousCode(customCode, 'customCode');
         mapperCode = customCode;
       } else {
         mapperCode = buildImportMapperFn(schemaName, recordType, description, fieldMappings);
@@ -796,9 +1013,10 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     // ── get_generated_files ──────────────────────────────────────────────────
     if (name === 'get_generated_files') {
       const outDir = args.outputDir
-        ? resolve(PROJECT_ROOT, args.outputDir)
+        ? assertWithinProject(args.outputDir)
         : join(PROJECT_ROOT, 'output');
-      const limit = args.limit || 20;
+
+      const limit = Math.min(Number(args.limit) || 20, MAX_LIST_LIMIT);
       const files = getOutputFiles(outDir, limit);
 
       if (!files.length) {
