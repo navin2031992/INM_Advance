@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000001</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.420+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000001</Id>
+      <CreDtTm>2026-06-18T15:14:21.420+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>10001</IBAN></Id>
+        <Ccy>CAD</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000012</NtryRef>
+        <Amt Ccy="CHF">328604.22</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-09</Dt></BookgDt>
+        <ValDt><Dt>2026-01-09</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF93723593</EndToEndId>
+            <TxId>REF93723593</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CHF">328604.22</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>FX contract settlement</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000011</NtryRef>
+        <Amt Ccy="CAD">103183.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-25</Dt></BookgDt>
+        <ValDt><Dt>2026-01-27</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF20406156</EndToEndId>
+            <TxId>REF20406156</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CAD">103183.00</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Commission income</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>
+
+<!-- ===== NEXT ACCOUNT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000002</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.435+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000002</Id>
+      <CreDtTm>2026-06-18T15:14:21.435+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>10002</IBAN></Id>
+        <Ccy>JPY</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000003</NtryRef>
+        <Amt Ccy="AUD">359407.57</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-18</Dt></BookgDt>
+        <ValDt><Dt>2026-01-18</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF93949075</EndToEndId>
+            <TxId>REF93949075</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="AUD">359407.57</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Bond coupon payment</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000002</NtryRef>
+        <Amt Ccy="JPY">30169.29</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-02-13</Dt></BookgDt>
+        <ValDt><Dt>2026-02-13</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF76008946</EndToEndId>
+            <TxId>REF76008946</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="JPY">30169.29</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Supplier payment</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000007</NtryRef>
+        <Amt Ccy="CAD">36286.97</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-03-24</Dt></BookgDt>
+        <ValDt><Dt>2026-03-25</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF74753338</EndToEndId>
+            <TxId>REF74753338</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CAD">36286.97</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Service fee payment</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>
+
+<!-- ===== NEXT ACCOUNT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000003</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.435+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000003</Id>
+      <CreDtTm>2026-06-18T15:14:21.435+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>20001</IBAN></Id>
+        <Ccy>CHF</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000024</NtryRef>
+        <Amt Ccy="CHF">207783.74</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-03</Dt></BookgDt>
+        <ValDt><Dt>2026-01-03</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF47882871</EndToEndId>
+            <TxId>REF47882871</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CHF">207783.74</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>FX contract payment</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000009</NtryRef>
+        <Amt Ccy="CAD">308434.83</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-29</Dt></BookgDt>
+        <ValDt><Dt>2026-01-29</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF84362541</EndToEndId>
+            <TxId>REF84362541</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CAD">308434.83</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Customer payment received</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000001</NtryRef>
+        <Amt Ccy="CHF">341818.73</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-02-21</Dt></BookgDt>
+        <ValDt><Dt>2026-02-24</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF29506051</EndToEndId>
+            <TxId>REF29506051</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CHF">341818.73</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Tax remittance</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>
+
+<!-- ===== NEXT ACCOUNT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000004</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.435+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000004</Id>
+      <CreDtTm>2026-06-18T15:14:21.435+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>20002</IBAN></Id>
+        <Ccy>AUD</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000010</NtryRef>
+        <Amt Ccy="USD">39254.81</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-21</Dt></BookgDt>
+        <ValDt><Dt>2026-01-23</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF55752368</EndToEndId>
+            <TxId>REF55752368</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="USD">39254.81</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Payroll disbursement</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000004</NtryRef>
+        <Amt Ccy="AUD">221009.51</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-29</Dt></BookgDt>
+        <ValDt><Dt>2026-01-29</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF50903258</EndToEndId>
+            <TxId>REF50903258</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="AUD">221009.51</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Interest expense</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>
+
+<!-- ===== NEXT ACCOUNT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000005</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000005</Id>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>30001</IBAN></Id>
+        <Ccy>GBP</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000015</NtryRef>
+        <Amt Ccy="GBP">73464.75</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-30</Dt></BookgDt>
+        <ValDt><Dt>2026-02-02</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF41804311-1</EndToEndId>
+            <TxId>REF41804311-1</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="GBP">73464.75</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>SEPA credit transfer</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000016</NtryRef>
+        <Amt Ccy="GBP">107386.19</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-30</Dt></BookgDt>
+        <ValDt><Dt>2026-02-02</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF41804311-2</EndToEndId>
+            <TxId>REF41804311-2</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="GBP">107386.19</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Sales proceeds</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>
+
+<!-- ===== NEXT ACCOUNT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000006</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000006</Id>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>40001</IBAN></Id>
+        <Ccy>USD</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000013</NtryRef>
+        <Amt Ccy="CHF">44694.20</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-09</Dt></BookgDt>
+        <ValDt><Dt>2026-01-13</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF59994100</EndToEndId>
+            <TxId>REF59994100</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CHF">44694.20</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Tax remittance</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000014</NtryRef>
+        <Amt Ccy="USD">144909.86</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-10</Dt></BookgDt>
+        <ValDt><Dt>2026-01-13</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF33699724</EndToEndId>
+            <TxId>REF33699724</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="USD">144909.86</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Payroll funding</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000020</NtryRef>
+        <Amt Ccy="CHF">45018.04</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-22</Dt></BookgDt>
+        <ValDt><Dt>2026-01-23</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF20910533-1</EndToEndId>
+            <TxId>REF20910533-1</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CHF">45018.04</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Wire transfer inbound</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000021</NtryRef>
+        <Amt Ccy="CHF">44607.27</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-22</Dt></BookgDt>
+        <ValDt><Dt>2026-01-23</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF20910533-2</EndToEndId>
+            <TxId>REF20910533-2</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CHF">44607.27</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Trade settlement receipt</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000022</NtryRef>
+        <Amt Ccy="CHF">45623.59</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-22</Dt></BookgDt>
+        <ValDt><Dt>2026-01-23</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF20910533-3</EndToEndId>
+            <TxId>REF20910533-3</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CHF">45623.59</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>FX contract settlement</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000008</NtryRef>
+        <Amt Ccy="USD">20730.39</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-23</Dt></BookgDt>
+        <ValDt><Dt>2026-01-26</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF10867774</EndToEndId>
+            <TxId>REF10867774</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="USD">20730.39</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Utility payment</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000023</NtryRef>
+        <Amt Ccy="CHF">286525.46</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-03-17</Dt></BookgDt>
+        <ValDt><Dt>2026-03-17</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF20643429</EndToEndId>
+            <TxId>REF20643429</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CHF">286525.46</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Equipment purchase</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>
+
+<!-- ===== NEXT ACCOUNT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000007</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000007</Id>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>40002</IBAN></Id>
+        <Ccy>EUR</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000025</NtryRef>
+        <Amt Ccy="JPY">175630.40</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-20</Dt></BookgDt>
+        <ValDt><Dt>2026-01-22</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF64926835</EndToEndId>
+            <TxId>REF64926835</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="JPY">175630.40</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Bond redemption</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000017</NtryRef>
+        <Amt Ccy="EUR">136090.62</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-03-28</Dt></BookgDt>
+        <ValDt><Dt>2026-03-31</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF88135535-1</EndToEndId>
+            <TxId>REF88135535-1</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="EUR">136090.62</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Utility payment</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000018</NtryRef>
+        <Amt Ccy="EUR">208222.01</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-03-28</Dt></BookgDt>
+        <ValDt><Dt>2026-03-31</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF88135535-2</EndToEndId>
+            <TxId>REF88135535-2</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="EUR">208222.01</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Insurance premium payment</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>LDG00000019</NtryRef>
+        <Amt Ccy="EUR">150739.98</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-03-28</Dt></BookgDt>
+        <ValDt><Dt>2026-03-31</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF88135535-3</EndToEndId>
+            <TxId>REF88135535-3</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="EUR">150739.98</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Cheque payment</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>
+
+<!-- ===== NEXT ACCOUNT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000008</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000008</Id>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>50001</IBAN></Id>
+        <Ccy>CAD</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000006</NtryRef>
+        <Amt Ccy="CAD">452728.95</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-01-22</Dt></BookgDt>
+        <ValDt><Dt>2026-01-22</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF19533886</EndToEndId>
+            <TxId>REF19533886</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CAD">452728.95</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Payroll funding</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>
+
+<!-- ===== NEXT ACCOUNT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.08 camt.054.001.08.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-00000009</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-CAMT054-00000009</Id>
+      <CreDtTm>2026-06-18T15:14:21.436+00:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>60001</IBAN></Id>
+        <Ccy>CAD</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>LDG00000005</NtryRef>
+        <Amt Ccy="CAD">34809.92</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-03-03</Dt></BookgDt>
+        <ValDt><Dt>2026-03-03</Dt></ValDt>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs>
+            <EndToEndId>REF13088215</EndToEndId>
+            <TxId>REF13088215</TxId>
+          </Refs>
+          <AmtDtls><InstdAmt><Amt Ccy="CAD">34809.92</Amt></InstdAmt></AmtDtls>
+          <RmtInf><Ustrd>Customer payment received</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>

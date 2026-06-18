@@ -50,9 +50,10 @@ const PROJECT_ROOT = resolve(__dirname, '..');
 // ── Allow-lists & limits ──────────────────────────────────────────────────────
 
 const VALID_FORMATS = new Set([
-  'csv','pipe','json','fixedwidth','excel',
-  'mt940','mt942','mt950','mt103','mt202','mt300','mt535',
-  'bai2','camt053','all'
+  'csv','pipe','json','fixedwidth','excel','tsv',
+  'mt940','mt942','mt950','mt103','mt202','mt300','mt535','mt910',
+  'bai2','camt053','camt052','camt054',
+  'nacha','ofx','pain001','pain002','pacs008','all'
 ]);
 
 const VALID_SCENARIOS = new Set([
@@ -167,6 +168,7 @@ const FORMAT_DESCRIPTIONS = {
   json:       'JSON array with 2-space indentation',
   fixedwidth: 'Fixed-width positional flat file with header/separator lines',
   excel:      'Microsoft Excel (.xlsx) — data sheet + summary sheet',
+  tsv:        'Tab-Separated Values — SAP / Oracle / analytics tool import',
   mt940:      'SWIFT MT940 Customer Statement',
   mt942:      'SWIFT MT942 Interim Transaction Report (intraday)',
   mt950:      'SWIFT MT950 Bank-to-Bank Statement',
@@ -175,7 +177,15 @@ const FORMAT_DESCRIPTIONS = {
   mt300:      'SWIFT MT300 Foreign Exchange Confirmation',
   mt535:      'SWIFT MT535 Statement of Holdings (securities)',
   bai2:       'BAI2 Cash Management (US banking standard)',
-  camt053:    'ISO 20022 camt.053 Bank-to-Customer Statement (XML)'
+  camt053:    'ISO 20022 camt.053 Bank-to-Customer Statement (XML)',
+  nacha:      'US ACH / NACHA payment file — 94-char fixed-width, CCD standard entry',
+  ofx:        'OFX 2.2 XML — QuickBooks / Sage / Quicken bank reconciliation feed',
+  camt052:    'ISO 20022 camt.052 Intraday Account Report — includes PDNG (pending) entries',
+  camt054:    'ISO 20022 camt.054 Debit/Credit Notification — real-time individual transaction alert',
+  pain001:    'ISO 20022 pain.001 Payment Initiation — outbound credit transfer instructions',
+  pain002:    'ISO 20022 pain.002 Payment Status Report — bank acceptance/rejection response to pain.001',
+  pacs008:    'ISO 20022 pacs.008 FI-to-FI Customer Credit Transfer — SWIFT MX replacement for MT103 (CBPR+)',
+  mt910:      'SWIFT MT910/MT900 Confirmation of Credit/Debit — bank confirmation of received/sent payment',
 };
 
 const SCENARIO_DESCRIPTIONS = {
@@ -411,8 +421,10 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           format: {
             type: 'string',
             description:
-              'Output format: csv | pipe | json | fixedwidth | excel | ' +
-              'mt940 | mt942 | mt950 | mt103 | mt202 | mt300 | mt535 | bai2 | camt053 | all  (default: csv)'
+              'Output format: csv | pipe | json | fixedwidth | excel | tsv | ' +
+              'mt940 | mt942 | mt950 | mt103 | mt202 | mt300 | mt535 | mt910 | ' +
+              'bai2 | camt053 | camt052 | camt054 | nacha | ofx | ' +
+              'pain001 | pain002 | pacs008 | all  (default: csv)'
           },
           file: {
             type: 'string',

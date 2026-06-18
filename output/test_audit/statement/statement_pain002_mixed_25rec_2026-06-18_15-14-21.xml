@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000001</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000001</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>4</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>903517.26</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000001</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF11465277</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000001</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="AUD">465276.39</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-18</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Tax remittance</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000017</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF49625398</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000017</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="AUD">138656.73</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-12</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Grant proceeds</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000018</OrgnlPmtInfId>
+      <PmtInfSts>RJCT</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF49625398</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000018</OrgnlTxId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn><Cd>AC06</Cd></Rsn>
+          <AddtlInf>Payment rejected — AC06</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="AUD">122934.67</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-12</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Refund received</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000019</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF49625398</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000019</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="AUD">176649.47</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-12</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Dividend income</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000002</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000002</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>439994.67</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000002</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF54519828</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000002</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CHF">439994.67</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-11</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Payroll disbursement</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000003</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000003</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>26310.40</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000003</OrgnlPmtInfId>
+      <PmtInfSts>PDNG</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF97712702</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000003</OrgnlTxId>
+        <TxSts>PDNG</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="AUD">26310.40</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-12</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Intercompany transfer out</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000004</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000004</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>122504.52</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000004</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF52054424</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000004</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="GBP">122504.52</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-04-01</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Intercompany transfer in</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000005</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000005</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>3</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>441639.92</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000005</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF25215015</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000005</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="USD">224096.28</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-01-28</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>SEPA direct debit</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000012</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF91059111</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000012</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="USD">105513.61</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-04</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Payroll disbursement</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000013</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF91059111</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000013</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="USD">112030.03</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-04</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Utility payment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000006</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000006</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>125764.05</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000006</OrgnlPmtInfId>
+      <PmtInfSts>ACCP</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF93465165</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000006</OrgnlTxId>
+        <TxSts>ACCP</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="JPY">125764.05</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-01-25</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Intercompany transfer in</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000007</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000007</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>138847.48</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000007</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF96887318</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000007</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="USD">138847.48</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-17</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Wire transfer outbound</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000008</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000008</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>280859.73</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000008</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF75721094</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000008</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CAD">280859.73</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-01-13</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Trade settlement payment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000009</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000009</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>4</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>694691.45</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000009</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF44574508</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000009</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CAD">479358.01</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-24</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Wire transfer inbound</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000014</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF37262614</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000014</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CAD">73771.51</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-20</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Trade settlement payment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000015</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF37262614</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000015</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CAD">61098.22</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-20</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Service fee payment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000016</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF37262614</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000016</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CAD">80463.71</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-20</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>ACH debit settlement</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000010</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000010</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>2</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>308574.98</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000010</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF68346912</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000010</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="GBP">281193.56</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-17</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Insurance premium payment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000011</OrgnlPmtInfId>
+      <PmtInfSts>RJCT</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF83636095</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000011</OrgnlTxId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn><Cd>AC01</Cd></Rsn>
+          <AddtlInf>Payment rejected — AC01</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="GBP">27381.42</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-12</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>SEPA direct debit</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000011</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000011</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>192013.95</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000020</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF52649880</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000020</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CAD">192013.95</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-27</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>FX contract payment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000012</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000012</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>2</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>291846.89</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000021</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF31332438</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000021</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="JPY">67546.23</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-17</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Dividend income</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000024</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF18229127</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000024</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="JPY">224300.66</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-02-11</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Trade settlement payment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000013</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000013</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>38030.36</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000022</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF88049634</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000022</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CHF">38030.36</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-30</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Intercompany transfer out</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000014</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000014</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>109345.03</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000023</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>REF43876640</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000023</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="CHF">109345.03</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-15</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Loan repayment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
+
+<!-- ===== NEXT STATUS REPORT ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.002.001.11 pain.002.001.11.xsd">
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PAIN002-00000015</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.746+00:00</CreDtTm>
+      <InitgPty><Nm>IntelliMatch Bank</Nm></InitgPty>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2LXXX</BICFI></FinInstnId></DbtrAgt>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAIN001-00000015</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>406493.43</OrgnlCtrlSum>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF-STM00000025</OrgnlPmtInfId>
+      <PmtInfSts>ACSC</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>STREF54293860</OrgnlEndToEndId>
+        <OrgnlTxId>STM00000025</OrgnlTxId>
+        <TxSts>ACSC</TxSts>
+        <OrgnlTxRef>
+          <Amt><InstdAmt Ccy="USD">406493.43</InstdAmt></Amt>
+          <ReqdExctnDt><Dt>2026-03-06</Dt></ReqdExctnDt>
+          <RmtInf><Ustrd>Bond coupon payment</Ustrd></RmtInf>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>

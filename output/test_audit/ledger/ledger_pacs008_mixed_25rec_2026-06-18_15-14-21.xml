@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000001</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>267151.95</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000001</InstrId>
+        <EndToEndId>REF91202243</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="AUD">267151.95</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-20</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Xi Analytics</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Kappa Group</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>AU123456789012345678</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>FX contract settlement</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000002</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>469789.57</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000002</InstrId>
+        <EndToEndId>REF13994562</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="JPY">469789.57</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-29</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Mu Technologies</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Delta Manufacturing</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>CH9300762011623852957</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Equity sale proceeds</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000003</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>430718.96</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000003</InstrId>
+        <EndToEndId>REF11766896</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CAD">430718.96</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-18</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Acme Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>NL91ABNA0417164300</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Gamma Holdings</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>US123456789012345678</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Cheque payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000004</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>385374.62</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000004</InstrId>
+        <EndToEndId>REF53538493</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CAD">385374.62</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-03</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Alpha Finance</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>US123456789012345678</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Nu Enterprises</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>SEPA credit transfer</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000005</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>133673.79</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000005</InstrId>
+        <EndToEndId>REF21784567</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="AUD">133673.79</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-09</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Gamma Holdings</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>NL91ABNA0417164300</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Zeta Logistics</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Refund received</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000006</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>170029.52</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000006</InstrId>
+        <EndToEndId>REF84929251</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="JPY">170029.52</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-02</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Tech Solutions Inc</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Delta Manufacturing</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>US123456789012345678</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Supplier payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000007</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>233256.34</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000007</InstrId>
+        <EndToEndId>REF83587043</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CHF">233256.34</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-21</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Nu Enterprises</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Acme Corp</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>ACH debit settlement</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000008</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>477227.63</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000008</InstrId>
+        <EndToEndId>REF77246459</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="AUD">477227.63</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-30</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Epsilon Services</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Omicron Systems</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Bond coupon payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000009</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>496248.77</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000009</InstrId>
+        <EndToEndId>REF32851577</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="AUD">496248.77</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-19</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Acme Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>US123456789012345678</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Zeta Logistics</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>AU123456789012345678</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>FX contract settlement</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000010</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>78556.29</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000010</InstrId>
+        <EndToEndId>REF78435114</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="EUR">78556.29</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-03-31</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Rho Trading</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Epsilon Services</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>AU123456789012345678</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Invoice payment to vendor</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000011</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>296643.95</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000011</InstrId>
+        <EndToEndId>REF25325285</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CHF">296643.95</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-20</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Zeta Logistics</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>NL91ABNA0417164300</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Iota Partners</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>FX contract payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000012</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>8365.43</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000012</InstrId>
+        <EndToEndId>REF23909613</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="USD">8365.43</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-16</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Global Trade Ltd</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>FR7614508059144921279050070</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Epsilon Services</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>FR7614508059144921279050070</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Wire transfer inbound</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000013</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>170410.97</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000013</InstrId>
+        <EndToEndId>REF40930265</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CAD">170410.97</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-06</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Eta Consulting</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>CH9300762011623852957</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Acme Corp</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Customer advance payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000014</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>359251.09</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000014</InstrId>
+        <EndToEndId>REF49306082</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="USD">359251.09</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-13</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Acme Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Beta Investments</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>CH9300762011623852957</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Customer advance payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000015</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.593+00:00</CreDtTm>
+      <NbOfTxs>3</NbOfTxs>
+      <CtrlSum>491445.15</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000015</InstrId>
+        <EndToEndId>REF62439423-1</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="JPY">174482.46</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-25</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Omicron Systems</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Kappa Group</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>CH9300762011623852957</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Rent payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000016</InstrId>
+        <EndToEndId>REF62439423-2</EndToEndId>
+        <UETR>00000002-0000-4000-a000-000000020000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="JPY">170786.52</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-25</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Eta Consulting</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Lambda Ventures</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Payroll disbursement</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000017</InstrId>
+        <EndToEndId>REF62439423-3</EndToEndId>
+        <UETR>00000003-0000-4000-a000-000000030000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="JPY">146176.17</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-25</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Nu Enterprises</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Eta Consulting</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>NL91ABNA0417164300</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Cheque payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000016</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.594+00:00</CreDtTm>
+      <NbOfTxs>3</NbOfTxs>
+      <CtrlSum>331171.00</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000018</InstrId>
+        <EndToEndId>REF35256329-1</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CHF">124532.53</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-03-27</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Zeta Logistics</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>FR7614508059144921279050070</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Epsilon Services</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>US123456789012345678</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Rent payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000019</InstrId>
+        <EndToEndId>REF35256329-2</EndToEndId>
+        <UETR>00000002-0000-4000-a000-000000020000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CHF">118290.45</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-03-27</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Zeta Logistics</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>US123456789012345678</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Tech Solutions Inc</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Bond redemption</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000020</InstrId>
+        <EndToEndId>REF35256329-3</EndToEndId>
+        <UETR>00000003-0000-4000-a000-000000030000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CHF">88348.02</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-03-27</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Zeta Logistics</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Iota Partners</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Invoice payment to vendor</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000017</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.594+00:00</CreDtTm>
+      <NbOfTxs>2</NbOfTxs>
+      <CtrlSum>249245.65</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000021</InstrId>
+        <EndToEndId>REF24119040-1</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="USD">139428.94</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-03-31</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Theta Capital</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Gamma Holdings</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>FR7614508059144921279050070</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Rent payment</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000022</InstrId>
+        <EndToEndId>REF24119040-2</EndToEndId>
+        <UETR>00000002-0000-4000-a000-000000020000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="USD">109816.71</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-03-31</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Beta Investments</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>CH9300762011623852957</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Gamma Holdings</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>FR7614508059144921279050070</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Tax remittance</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000018</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.594+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>137238.73</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000023</InstrId>
+        <EndToEndId>REF37617323</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="GBP">137238.73</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-01-06</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Rho Trading</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>CITIUS33</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Global Trade Ltd</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Commission income</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000019</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.594+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>106960.83</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>BOFAUS3N</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000024</InstrId>
+        <EndToEndId>REF54494162</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="JPY">106960.83</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-03-24</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Eta Consulting</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>FR7614508059144921279050070</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Theta Capital</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>CH9300762011623852957</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Payroll disbursement</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+<!-- ===== NEXT MESSAGE ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09 pacs.008.001.09.xsd">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS008-00000020</MsgId>
+      <CreDtTm>2026-06-18T15:14:21.594+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>71620.09</CtrlSum>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>CHASUS33</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>LDG00000025</InstrId>
+        <EndToEndId>REF27007190</EndToEndId>
+        <UETR>00000001-0000-4000-a000-000000010000</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="CHF">71620.09</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-02-03</IntrBkSttlmDt>
+      <InstgAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></InstdAgt>
+      <Dbtr><Nm>Zeta Logistics</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>WPACAU2S</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Mu Technologies</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></CdtrAcct>
+      <RmtInf><Ustrd>Loan drawdown</Ustrd></RmtInf>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>

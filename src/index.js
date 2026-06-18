@@ -91,7 +91,7 @@ if (config.dateFormat && !VALID_DATE_FORMATS.includes(config.dateFormat)) {
   process.exit(1);
 }
 
-const VALID_FORMATS = ['csv','pipe','json','fixedwidth','excel','mt940','mt942','mt950','mt103','mt202','mt300','mt535','bai2','camt053','all'];
+const VALID_FORMATS = ['csv','pipe','json','fixedwidth','excel','tsv','mt940','mt942','mt950','mt103','mt202','mt300','mt535','mt910','bai2','camt053','camt052','camt054','nacha','ofx','pain001','pain002','pacs008','all'];
 if (!VALID_FORMATS.includes(config.format)) {
   console.error(`[ERROR] Unknown format "${config.format}". Valid: ${VALID_FORMATS.join(', ')}`);
   process.exit(1);
@@ -181,6 +181,7 @@ const formatters = {
   json:       require('./formatters/jsonFormatter'),
   fixedwidth: require('./formatters/fixedWidthFormatter'),
   excel:      require('./formatters/excelFormatter'),
+  tsv:        require('./formatters/tsvFormatter'),
   mt940:      require('./formatters/mt940Formatter'),
   mt942:      require('./formatters/mt942Formatter'),
   mt950:      require('./formatters/mt950Formatter'),
@@ -189,7 +190,15 @@ const formatters = {
   mt300:      require('./formatters/mt300Formatter'),
   mt535:      require('./formatters/mt535Formatter'),
   bai2:       require('./formatters/bai2Formatter'),
-  camt053:    require('./formatters/camt053Formatter')
+  camt053:    require('./formatters/camt053Formatter'),
+  nacha:      require('./formatters/nachaFormatter'),
+  ofx:        require('./formatters/ofxFormatter'),
+  camt052:    require('./formatters/camt052Formatter'),
+  camt054:    require('./formatters/camt054Formatter'),
+  pain001:    require('./formatters/pain001Formatter'),
+  pain002:    require('./formatters/pain002Formatter'),
+  pacs008:    require('./formatters/pacs008Formatter'),
+  mt910:      require('./formatters/mt910Formatter'),
 };
 
 // ── Main generation logic ────────────────────────────────────────────────────
@@ -427,9 +436,10 @@ Usage:
 Options:
   --records=N          Ledger records to generate          (default: 1000)
   --format=FORMAT      Output format:
-                         csv, pipe, json, fixedwidth, excel
+                         csv, pipe, json, fixedwidth, excel, tsv
                          mt940, mt942, mt950, mt103, mt202
-                         mt300, mt535, bai2, camt053, all  (default: csv)
+                         mt300, mt535, bai2, camt053
+                         nacha, ofx, camt052, pain001, all  (default: csv)
   --file=TYPE          Which files: ledger|statement|both  (default: both)
   --scenario=SCENARIO  Generate ONLY the specified scenario(s).
                        Single:   perfect | oneToMany | manyToOne |
@@ -496,6 +506,15 @@ Supported Formats (--format):
   mt535       SWIFT MT535 Statement of Holdings
   bai2        BAI2 Cash Management (US banking standard)
   camt053     ISO 20022 camt.053 Bank-to-Customer Statement (XML)
+  tsv         Tab-Separated Values (SAP/Oracle/analytics import)
+  nacha       US ACH / NACHA payment file (94-char fixed-width)
+  ofx         OFX 2.2 XML — QuickBooks / Sage / Quicken bank feed
+  camt052     ISO 20022 camt.052 Intraday Account Report (XML)
+  pain001     ISO 20022 pain.001 Payment Initiation (XML)
+  pain002     ISO 20022 pain.002 Payment Status Report (XML) — bank response to pain.001
+  camt054     ISO 20022 camt.054 Debit/Credit Notification (XML) — real-time tx alert
+  pacs008     ISO 20022 pacs.008 FI-to-FI Credit Transfer (XML) — SWIFT MX / MT103 replacement
+  mt910       SWIFT MT910/MT900 Confirmation of Credit / Debit
   all         Generate all formats above
 
 Import Format Schemas (--importFormat):

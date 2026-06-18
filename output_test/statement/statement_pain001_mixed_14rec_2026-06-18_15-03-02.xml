@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000001</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>199812.36</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000001</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>199812.36</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-02-24</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>USD</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF78106651</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="USD">199812.36</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Nu Enterprises</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Refund received</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+
+<!-- ===== NEXT BATCH ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000002</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>438124.87</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000002</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>438124.87</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-03-25</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>GBP</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF48546703</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="GBP">438124.87</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Global Trade Ltd</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Service fee payment</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+
+<!-- ===== NEXT BATCH ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000003</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>219743.73</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000003</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>219743.73</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-02-25</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>GBP</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF12459793</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="GBP">219743.73</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Epsilon Services</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Loan drawdown</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+
+<!-- ===== NEXT BATCH ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000004</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>3</NbOfTxs>
+      <CtrlSum>478774.74</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000004</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>3</NbOfTxs>
+      <CtrlSum>478774.74</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-03-31</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>AUD</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF84714799</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="AUD">165136.14</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Mu Technologies</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>FR7614508059144921279050070</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Bond redemption</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF84714799</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="AUD">166989.51</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Delta Manufacturing</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>NL91ABNA0417164300</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Supplier payment</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF84714799</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="AUD">146649.09</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Omicron Systems</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>NL91ABNA0417164300</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Cheque payment</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+
+<!-- ===== NEXT BATCH ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000005</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>4</NbOfTxs>
+      <CtrlSum>145728.58</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000005</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>4</NbOfTxs>
+      <CtrlSum>145728.58</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-03-17</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>CHF</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF37287624</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="CHF">8046.97</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Mu Technologies</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>ES9121000418450200051332</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Bond coupon payment</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF37287624</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="CHF">5946.94</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>ANZBAU3M</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Lambda Ventures</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>ES9121000418450200051332</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Customer payment received</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF37287624</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="CHF">7258.93</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Alpha Finance</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>SE4550000000058398257466</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Interest credit</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>STREF63240766</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="CHF">124475.74</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>DEUTDEDB</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Epsilon Services</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>CH9300762011623852957</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Payroll funding</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+
+<!-- ===== NEXT BATCH ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000006</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>275959.32</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000006</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>275959.32</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-03-23</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>CAD</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF82083453</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="CAD">275959.32</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>BARCGB22</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Global Trade Ltd</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>BE68539007547034</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Grant proceeds</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+
+<!-- ===== NEXT BATCH ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000007</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>45840.93</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000007</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>45840.93</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-02-18</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>AUD</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF34451574</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="AUD">45840.93</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Pi Solutions</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>FR7614508059144921279050070</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Supplier payment</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+
+<!-- ===== NEXT BATCH ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000008</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>457926.06</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000008</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>457926.06</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-01-28</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>JPY</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF33863028</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="JPY">457926.06</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>BNPAFRPP</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Theta Capital</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>ES9121000418450200051332</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Equipment purchase</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+
+<!-- ===== NEXT BATCH ===== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-00000009</MsgId>
+      <CreDtTm>2026-06-18T15:03:02.641+00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>375306.47</CtrlSum>
+      <InitgPty><Nm>IntelliMatch Corp</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF-PAIN001-00000009</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>375306.47</CtrlSum>
+      <PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+      <ReqdExctnDt><Dt>2026-02-05</Dt></ReqdExctnDt>
+      <Dbtr><Nm>IntelliMatch Corp</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id><Ccy>GBP</Ccy></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>HSBCGB2L</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><EndToEndId>REF51759282</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="GBP">375306.47</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>WFBIUS6S</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Iota Partners</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>AT611904300234573201</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>FX contract payment</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
