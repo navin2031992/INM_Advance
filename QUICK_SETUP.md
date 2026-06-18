@@ -2,6 +2,13 @@
 
 Connect the IntelliMatch data generator to your AI coding assistant in under 5 minutes.
 
+Two transport modes are available:
+
+| Mode | File | Used by |
+|---|---|---|
+| **stdio** | `mcp-server/index.js` | Claude Code, Roo Code, Cline |
+| **HTTP** | `mcp-server/http-server.js` | Cursor, Continue.dev, LM Studio, Ollama, Open WebUI, any OpenAI-compatible tool |
+
 ---
 
 ## Prerequisites
@@ -146,6 +153,102 @@ This uses `${workspaceFolder}` which resolves automatically for everyone on the 
 
 ---
 
+## Option E — HTTP Server (Cursor, LM Studio, Ollama, Open WebUI, any OpenAI tool)
+
+### Step 1 — Start the HTTP server
+
+```bash
+# Default: localhost:3456
+node mcp-server/http-server.js
+
+# Custom port
+MCP_HTTP_PORT=4000 node mcp-server/http-server.js
+
+# Expose on LAN (all network interfaces — only if behind your org firewall)
+MCP_HTTP_HOST=0.0.0.0 node mcp-server/http-server.js
+```
+
+### Step 2 — Connect your AI tool
+
+#### Cursor
+Add to `.cursor/mcp.json` in your project (or `~/.cursor/mcp.json` globally):
+```json
+{
+  "mcpServers": {
+    "intellimatch": {
+      "url": "http://127.0.0.1:3456/mcp"
+    }
+  }
+}
+```
+
+#### Continue.dev
+Add to `~/.continue/config.json`:
+```json
+{
+  "experimental": {
+    "modelContextProtocolServers": [
+      {
+        "transport": { "type": "streamableHttp", "url": "http://127.0.0.1:3456/mcp" }
+      }
+    ]
+  }
+}
+```
+
+#### LM Studio / Ollama / Open WebUI (OpenAI function calling)
+
+Use the REST endpoints directly:
+
+**List all tools** (call this to get the `tools` array for your chat request):
+```
+GET http://127.0.0.1:3456/openai/tools
+```
+
+**Execute a tool** (call this when the model invokes a function):
+```
+POST http://127.0.0.1:3456/openai/tools/call
+Content-Type: application/json
+
+{ "name": "generate_test_data", "arguments": { "records": 100, "format": "csv" } }
+```
+
+#### Any OpenAI-compatible client (Python example)
+```python
+import requests, openai
+
+# 1. Fetch tool definitions
+tools = requests.get("http://127.0.0.1:3456/openai/tools").json()["tools"]
+
+# 2. Send to your model (OpenAI, Azure, local, etc.)
+client = openai.OpenAI()
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "Generate 500 GL:BANK records in CSV format"}],
+    tools=tools
+)
+
+# 3. Execute the tool call the model chose
+tool_call = response.choices[0].message.tool_calls[0]
+result = requests.post(
+    "http://127.0.0.1:3456/openai/tools/call",
+    json={"name": tool_call.function.name, "arguments": tool_call.function.arguments}
+).json()
+print(result["content"][0]["text"])
+```
+
+### Step 3 — Verify
+
+```bash
+curl http://127.0.0.1:3456/health
+# → { "status": "ok", "server": "intellimatch-mcp", ... }
+
+curl http://127.0.0.1:3456/openai/tools | python -m json.tool | head -20
+# → { "tools": [ { "type": "function", "function": { "name": "generate_test_data" ... } } ] }
+```
+
+---
+
 ## Verifying the Connection
 
 Once connected, try these prompts to confirm everything works:
@@ -277,3 +380,25 @@ Check that the new format/schema name appears in the output.
 | `generator.config.json` | Default generation settings |
 | `output/ledger/` | Generated ledger files |
 | `output/statement/` | Generated statement files |
+
+
+For Roo Code — open Ctrl+Shift+P → "Roo: Open MCP Settings" and add:
+
+
+"intellimatch": {
+  "command": "node",
+  "args": ["mcp-server/index.js"],
+  "cwd": "C:\\NewInitiatives\\mcp\\INM_Advance"
+}
+For Cline — open the Cline MCP settings (%APPDATA%\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json) and add:
+
+
+"intellimatch": {
+  "command": "node",
+  "args": ["mcp-server/index.js"],
+  "cwd": "C:\\NewInitiatives\\mcp\\INM_Advance",
+  "disabled": false,
+  "alwaysAllow": []
+}
+That's it — no npm install, no extra config, just merge that block into the existing mcpServers object. The .mcp.json already in the project root handles Claude Code auto-discovery, so that one works with zero config when you open the folder.
+
