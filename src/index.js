@@ -91,7 +91,7 @@ if (config.dateFormat && !VALID_DATE_FORMATS.includes(config.dateFormat)) {
   process.exit(1);
 }
 
-const VALID_FORMATS = ['csv','pipe','json','fixedwidth','excel','mt940','mt942','mt950','mt103','mt202','mt300','mt535','bai2','camt053','tsv','all'];
+const VALID_FORMATS = ['csv','pipe','json','fixedwidth','excel','mt940','mt942','mt950','mt103','mt202','mt300','mt535','bai2','camt053','all'];
 if (!VALID_FORMATS.includes(config.format)) {
   console.error(`[ERROR] Unknown format "${config.format}". Valid: ${VALID_FORMATS.join(', ')}`);
   process.exit(1);
@@ -189,8 +189,7 @@ const formatters = {
   mt300:      require('./formatters/mt300Formatter'),
   mt535:      require('./formatters/mt535Formatter'),
   bai2:       require('./formatters/bai2Formatter'),
-  camt053:    require('./formatters/camt053Formatter'),
-  tsv:        require('./formatters/tsvFormatter')
+  camt053:    require('./formatters/camt053Formatter')
 };
 
 // ── Main generation logic ────────────────────────────────────────────────────
