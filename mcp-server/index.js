@@ -464,6 +464,24 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           consolidate: {
             type: 'number',
             description: 'manyToOne scenario: fixed number of ledger entries per group (>=2)'
+          },
+          ledgerAccounts: {
+            type: 'string',
+            description:
+              'Comma-separated ledger account numbers to use in the generated data, ' +
+              'e.g. "10001,20001,30001,40001". ' +
+              'Overrides the defaults in generator.config.json for this run. ' +
+              'Each account: letters, digits, hyphens, underscores (max 50 chars). ' +
+              'If omitted, the config defaults are used.'
+          },
+          bankAccounts: {
+            type: 'string',
+            description:
+              'Comma-separated bank account numbers / IBANs to use in the generated data, ' +
+              'e.g. "GB29NWBK60161331926819,DE89370400440532013000,US123456789012345678". ' +
+              'Overrides the defaults in generator.config.json for this run. ' +
+              'Each entry: uppercase letters and digits only, 4–34 characters (IBAN format). ' +
+              'If omitted, the config defaults are used.'
           }
         }
       }
@@ -693,18 +711,50 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         assertWithinProject(args.outputDir);
       }
 
+      // Validate ledgerAccounts — each token: letters/digits/hyphens/underscores, max 50 chars
+      const LEDGER_ACC_RE = /^[A-Za-z0-9_-]{1,50}$/;
+      if (args.ledgerAccounts !== undefined) {
+        const accs = String(args.ledgerAccounts).split(',').map(a => a.trim()).filter(Boolean);
+        if (accs.length === 0) throw new Error('ledgerAccounts must contain at least one account number.');
+        for (const a of accs) {
+          if (!LEDGER_ACC_RE.test(a)) {
+            throw new Error(
+              `Invalid ledger account "${a}". ` +
+              'Each account may only contain letters, digits, hyphens, or underscores (max 50 chars).'
+            );
+          }
+        }
+      }
+
+      // Validate bankAccounts — each token: IBAN-style uppercase letters+digits, 4–34 chars
+      const BANK_ACC_RE = /^[A-Z0-9]{4,34}$/;
+      if (args.bankAccounts !== undefined) {
+        const accs = String(args.bankAccounts).split(',').map(a => a.trim()).filter(Boolean);
+        if (accs.length === 0) throw new Error('bankAccounts must contain at least one account number.');
+        for (const a of accs) {
+          if (!BANK_ACC_RE.test(a)) {
+            throw new Error(
+              `Invalid bank account "${a}". ` +
+              'Each entry must be 4–34 uppercase letters and digits (IBAN format), e.g. GB29NWBK60161331926819.'
+            );
+          }
+        }
+      }
+
       // ── Build command args ──
       const cmdArgs = [];
-      if (args.records)      cmdArgs.push(`--records=${args.records}`);
-      if (args.format)       cmdArgs.push(`--format=${args.format}`);
-      if (args.file)         cmdArgs.push(`--file=${args.file}`);
-      if (args.scenario)     cmdArgs.push(`--scenario=${args.scenario}`);
-      if (args.importFormat) cmdArgs.push(`--importFormat=${args.importFormat}`);
-      if (args.currency)     cmdArgs.push(`--currency=${args.currency}`);
-      if (args.dateFormat)   cmdArgs.push(`--dateFormat=${args.dateFormat}`);
-      if (args.outputDir)    cmdArgs.push(`--output=${args.outputDir}`);
-      if (args.split)        cmdArgs.push(`--split=${args.split}`);
-      if (args.consolidate)  cmdArgs.push(`--consolidate=${args.consolidate}`);
+      if (args.records)        cmdArgs.push(`--records=${args.records}`);
+      if (args.format)         cmdArgs.push(`--format=${args.format}`);
+      if (args.file)           cmdArgs.push(`--file=${args.file}`);
+      if (args.scenario)       cmdArgs.push(`--scenario=${args.scenario}`);
+      if (args.importFormat)   cmdArgs.push(`--importFormat=${args.importFormat}`);
+      if (args.currency)       cmdArgs.push(`--currency=${args.currency}`);
+      if (args.dateFormat)     cmdArgs.push(`--dateFormat=${args.dateFormat}`);
+      if (args.outputDir)      cmdArgs.push(`--output=${args.outputDir}`);
+      if (args.split)          cmdArgs.push(`--split=${args.split}`);
+      if (args.consolidate)    cmdArgs.push(`--consolidate=${args.consolidate}`);
+      if (args.ledgerAccounts) cmdArgs.push(`--ledgerAccounts=${args.ledgerAccounts}`);
+      if (args.bankAccounts)   cmdArgs.push(`--bankAccounts=${args.bankAccounts}`);
 
       const output = await runGenerator(cmdArgs);
       const outDir = args.outputDir

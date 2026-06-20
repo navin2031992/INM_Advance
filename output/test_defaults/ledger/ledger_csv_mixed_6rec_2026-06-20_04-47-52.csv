@@ -1,0 +1,7 @@
+TxnID,LedgerAccount,TransactionDate,PostingDate,Currency,DebitAmount,CreditAmount,Description,ReferenceNumber,MatchType
+LDG00000001,10002,2026-02-04,2026-02-06,JPY,0.00,206558.48,Customer advance payment,REF51876009,perfect
+LDG00000002,20001,2026-01-31,2026-02-03,EUR,0.00,170982.51,Dividend income,REF16201773,perfect
+LDG00000003,30001,2026-02-27,2026-03-02,USD,208961.61,0.00,Invoice payment to vendor,REF48317900,perfect
+LDG00000004,20002,2026-03-05,2026-03-09,CHF,319938.42,0.00,ACH debit settlement,REF32328337,oneToMany
+LDG00000005,40002,2026-03-29,2026-03-31,EUR,2423.66,0.00,Insurance premium payment,REF59342547-1,manyToOne
+LDG00000006,40002,2026-03-29,2026-03-31,EUR,1667.53,0.00,ACH debit settlement,REF59342547-2,manyToOne

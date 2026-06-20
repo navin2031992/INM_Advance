@@ -79,6 +79,22 @@ if (argv.consolidate)  config.consolidate  = parseInt(argv.consolidate, 10);
 if (argv.importFormat) config.importFormat = String(argv.importFormat).toUpperCase();
 if (argv.dateFormat)   config.dateFormat   = String(argv.dateFormat);
 
+// Account overrides — comma-separated lists supplied by the user (e.g. via MCP)
+if (argv.ledgerAccounts) {
+  const accs = String(argv.ledgerAccounts).split(',').map(a => a.trim()).filter(Boolean);
+  if (accs.length > 0) {
+    if (!config.accounts) config.accounts = {};
+    config.accounts.ledger = accs;
+  }
+}
+if (argv.bankAccounts) {
+  const accs = String(argv.bankAccounts).split(',').map(a => a.trim()).filter(Boolean);
+  if (accs.length > 0) {
+    if (!config.accounts) config.accounts = {};
+    config.accounts.bank = accs;
+  }
+}
+
 // Validate records
 if (!config.records || config.records < 1) {
   console.error('[ERROR] --records must be a positive integer.');
@@ -252,6 +268,8 @@ function run() {
   console.log(`       Date format   : ${config.dateFormat || 'YYYY-MM-DD (default)'}`);
   console.log(`       Date range    : ${config.dateRange.start} → ${config.dateRange.end}`);
   console.log(`       Output dir    : ${config.outputDir}`);
+  console.log(`       Ledger accts  : ${(config.accounts && config.accounts.ledger || []).join(', ')}`);
+  console.log(`       Bank accts    : ${(config.accounts && config.accounts.bank || []).join(', ')}`);
   if (!scenarioMode) {
     console.log(`       Match dist    : ${JSON.stringify(config.matchingPercentages)}`);
   }
@@ -465,6 +483,12 @@ Options:
                          DD/MM/YYYY  Day/Month/Year separated
                          MM/DD/YYYY  Month/Day/Year separated
                        SWIFT formats (mt*) always use YYMMDD per the standard.
+  --ledgerAccounts=A,B Comma-separated ledger account numbers to use.
+                       Overrides the "accounts.ledger" list in generator.config.json.
+                       e.g. --ledgerAccounts=10001,20001,30001
+  --bankAccounts=A,B   Comma-separated bank account numbers / IBANs to use.
+                       Overrides the "accounts.bank" list in generator.config.json.
+                       e.g. --bankAccounts=GB29NWBK60161331926819,DE89370400440532013000
   --currency=CUR       Override currency (e.g. USD, EUR, GBP)
   --config=PATH        Config file path      (default: generator.config.json)
   --output=DIR         Output directory      (default: ./output)
